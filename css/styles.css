@@ -1,8 +1,64 @@
+:root {
+    --bg-color: #101010;
+    --section-dividers: #545151;
+    --text-color: #FFFDFD;
+    --hyper-link: #ff4a4a;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
+
+body,
+html {
+    font-size: 16px;
+}
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
     padding: 40px 0;
+    background-color: var(--bg-color);
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.25em;
+}
+
+a {
+    color: var(--hyper-link);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+ul,
+li,
+ol {
+    color: var(--text-color);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.divider {
+    border-bottom: 1px solid var(--section-dividers);
+    padding-bottom: 20px;
+}
+
+.margintop30 {
+    margin-top: 30px;
 }
 
 .header .header-container {
@@ -11,6 +67,30 @@ body {
     max-width: 1366px;
     width: 100%;
     margin: 0 auto; 
+    position: relative;
+}
+
+.header-container .image-container {
+    width: 34%;
+}
+
+.header-container .logo {
+    max-width: 50px;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 275px;
+}
+
+.header-container .title-container {
+    width: 100%;
+    /* text-align: center;
+    align-self: center; */
+}
+
+.title-container h1 {
+    margin-top: 0;
 }
 
 .header .col-left {
@@ -21,13 +101,22 @@ body {
 
 .header .col-right {
     width: 25%;
+    position: relative;
 }
 
 .navigation {
-    position: -webkit-sticky;
-    position: sticky;
+    position: absolute;
+    right: 0;
     top: 0;
-    align-self: flex-start;
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.navigation a {
+    padding: 2px 0;
+    display: inline-block;
 }
 
 .main-content {
